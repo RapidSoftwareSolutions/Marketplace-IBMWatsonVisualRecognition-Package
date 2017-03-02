@@ -224,8 +224,8 @@
       ]
     },
     {
-      "name": "createClassifier",
-      "description": "Train a new multi-faceted classifier on the uploaded image data.",
+      "name": "updateClassifier",
+      "description": "Update an existing classifier by adding new classes, or by adding new images to existing classes.",
       "args": [
         {
           "name": "apiKey",

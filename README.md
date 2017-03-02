@@ -66,8 +66,8 @@ Retrieve information about a specific classifier.
 | version     | String     | The release date of the version of the API you want to use.
 | classifierId| Boolean    | The ID of the classifier for which you want details.
 
-## IBMWatsonVisualRecognition.createClassifier
-Train a new multi-faceted classifier on the uploaded image data.
+## IBMWatsonVisualRecognition.updateClassifier
+Update an existing classifier by adding new classes, or by adding new images to existing classes.
 
 | Field                    | Type       | Description
 |--------------------------|------------|----------
