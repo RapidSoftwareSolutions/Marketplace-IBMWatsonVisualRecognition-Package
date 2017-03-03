@@ -13,8 +13,7 @@ $app->post('/api/IBMWatsonVisualRecognition/createClassifier', function ($reques
     //forming request to vendor API
     $query_str = $settings['api_url'] . "classifiers?api_key=".$post_data['args']['apiKey'].'&version='.$post_data['args']['version'];
     $body = array();
-    var_dump($post_data['args']['positiveExampleImages1'], $post_data['args']['positiveExampleImages2']);
-    exit();
+
 
     $body[] =
         [
@@ -45,12 +44,12 @@ $app->post('/api/IBMWatsonVisualRecognition/createClassifier', function ($reques
 
     try {
 
-        $resp = $client->request('POST', $query_str, [
-            'multipart' => $body
-        ]);
-
-        $responseBody = $resp->getBody()->getContents();
-        $rawBody = json_decode($resp->getBody());
+//        $resp = $client->request('POST', $query_str, [
+//            'multipart' => $body
+//        ]);
+//
+//        $responseBody = $resp->getBody()->getContents();
+//        $rawBody = json_decode($resp->getBody());
 
         $all_data[] = $rawBody;
         if ($response->getStatusCode() == '200') {
@@ -59,7 +58,7 @@ $app->post('/api/IBMWatsonVisualRecognition/createClassifier', function ($reques
         } else {
             $result['callback'] = 'error';
             $result['contextWrites']['to']['status_code'] = 'API_ERROR';
-            $result['contextWrites']['to']['status_msg'] = is_array($responseBody) ? $responseBody : json_decode($responseBody);
+            $result['contextWrites']['to']['status_msg'] = $post_data['args']['positiveExampleImages1']//is_array($responseBody) ? $responseBody : json_decode($responseBody);
         }
 
     } catch (\GuzzleHttp\Exception\ClientException $exception) {
