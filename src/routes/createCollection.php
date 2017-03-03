@@ -24,7 +24,6 @@ $app->post('/api/IBMWatsonVisualRecognition/createCollection', function ($reques
     //requesting remote API
     $client = new GuzzleHttp\Client();
 
-
     try {
 
         $resp = $client->request('POST', $query_str, [

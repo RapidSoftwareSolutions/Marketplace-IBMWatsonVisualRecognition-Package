@@ -42,7 +42,7 @@ $app->post('/api/IBMWatsonVisualRecognition/classifyImage', function ($request, 
         $rawBody = json_decode($resp->getBody());
 
         $all_data[] = $rawBody;
-        if ($response->getStatusCode() == '200') {
+        if ($response->getStatusCode() == '200' && $rawBody->status !='ERROR') {
             $result['callback'] = 'success';
             $result['contextWrites']['to'] = is_array($all_data) ? $all_data : json_decode($all_data);
         } else {

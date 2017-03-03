@@ -64,7 +64,7 @@ Retrieve information about a specific classifier.
 |-------------|------------|----------
 | apiKey      | credentials| Api key obtained from IBM
 | version     | String     | The release date of the version of the API you want to use.
-| classifierId| Boolean    | The ID of the classifier for which you want details.
+| classifierId| String     | The ID of the classifier for which you want details.
 
 ## IBMWatsonVisualRecognition.updateClassifier
 Update an existing classifier by adding new classes, or by adding new images to existing classes.
