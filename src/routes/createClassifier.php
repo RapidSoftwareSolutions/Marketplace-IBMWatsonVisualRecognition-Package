@@ -13,6 +13,8 @@ $app->post('/api/IBMWatsonVisualRecognition/createClassifier', function ($reques
     //forming request to vendor API
     $query_str = $settings['api_url'] . "classifiers?api_key=".$post_data['args']['apiKey'].'&version='.$post_data['args']['version'];
     $body = array();
+    var_dump($post_data['args']['positiveExampleImages1'], $post_data['args']['positiveExampleImages2']);
+    exit();
 
     $body[] =
         [
