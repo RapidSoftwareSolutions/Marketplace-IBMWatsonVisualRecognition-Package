@@ -51,14 +51,14 @@ $app->post('/api/IBMWatsonVisualRecognition/createClassifier', function ($reques
 //        $responseBody = $resp->getBody()->getContents();
 //        $rawBody = json_decode($resp->getBody());
 
-        $all_data[] = $rawBody;
+//        $all_data[] = $rawBody;
         if ($response->getStatusCode() == '200') {
             $result['callback'] = 'success';
-            $result['contextWrites']['to'] = is_array($all_data) ? $all_data : json_decode($all_data);
+//            $result['contextWrites']['to'] = is_array($all_data) ? $all_data : json_decode($all_data);
         } else {
             $result['callback'] = 'error';
             $result['contextWrites']['to']['status_code'] = 'API_ERROR';
-            $result['contextWrites']['to']['status_msg'] = $post_data['args']['positiveExampleImages1']//is_array($responseBody) ? $responseBody : json_decode($responseBody);
+            $result['contextWrites']['to']['status_msg'] = $post_data['args']['positiveExampleImages1'];//is_array($responseBody) ? $responseBody : json_decode($responseBody);
         }
 
     } catch (\GuzzleHttp\Exception\ClientException $exception) {
