@@ -44,17 +44,17 @@ $app->post('/api/IBMWatsonVisualRecognition/createClassifier', function ($reques
 
     try {
 
-//        $resp = $client->request('POST', $query_str, [
-//            'multipart' => $body
-//        ]);
-//
-//        $responseBody = $resp->getBody()->getContents();
-//        $rawBody = json_decode($resp->getBody());
+        $resp = $client->request('POST', $query_str, [
+            'multipart' => $body
+        ]);
 
-//        $all_data[] = $rawBody;
+        $responseBody = $resp->getBody()->getContents();
+        $rawBody = json_decode($resp->getBody());
+
+        $all_data[] = $rawBody;
         if ($response->getStatusCode() == '200') {
             $result['callback'] = 'success';
-            $result['contextWrites']['to'] = $post_data['args']['positiveExampleImages1']. '+'.$post_data['args']['positiveExampleImages1']; //is_array($all_data) ? $all_data : json_decode($all_data);
+            $result['contextWrites']['to'] = is_array($all_data) ? $all_data : json_decode($all_data);
         } else {
             $result['callback'] = 'error';
             $result['contextWrites']['to']['status_code'] = 'API_ERROR';
