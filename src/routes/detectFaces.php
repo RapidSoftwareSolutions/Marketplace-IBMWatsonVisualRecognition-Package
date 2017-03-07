@@ -28,7 +28,7 @@ $app->post('/api/IBMWatsonVisualRecognition/detectFaces', function ($request, $r
 
         $responseBody = $resp->getBody()->getContents();
         $rawBody = json_decode($resp->getBody());
-      
+
         $all_data[] = $rawBody;
         if ($response->getStatusCode() == '200' && $rawBody->status !='ERROR') {
             $result['callback'] = 'success';
