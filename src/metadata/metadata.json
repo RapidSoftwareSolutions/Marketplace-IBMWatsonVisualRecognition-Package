@@ -153,7 +153,7 @@
         },
         {
           "name": "negativeExampleImages",
-          "type": "String",
+          "type": "File",
           "info": "A compressed (.zip) file of images that do not depict the visual subject of any of the classes of the new classifier. Must contain a minimum of 10 images.",
           "required": false
         }
@@ -252,7 +252,7 @@
         },
         {
           "name": "positiveExampleImages",
-          "type": "String",
+          "type": "File",
           "info": "A compressed (.zip) file of images that depict the visual subject for a class within the new classifier. Must contain a minimum of 10 images. Minimum recommend size is 32X32 pixels.",
           "required": true
         },
