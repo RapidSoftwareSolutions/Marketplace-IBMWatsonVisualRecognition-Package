@@ -17,10 +17,10 @@ $app->post('/api/IBMWatsonVisualRecognition/classifyImage', function ($request, 
     $body['url'] = $post_data['args']['imageUrl'];
     $body['version'] = $post_data['args']['version'];
     if (isset($post_data['args']['owners']) && strlen($post_data['args']['owners']) > 0){
-        $body['owners'] = $post_data['args']['owners'];
+        $body['owners'] = implode(',', $post_data['args']['owners']);
     }
     if (isset($post_data['args']['classifierIds']) && strlen($post_data['args']['classifierIds']) > 0){
-        $body['classifier_ids'] = $post_data['args']['classifierIds'];
+        $body['classifier_ids'] = implode(',', $post_data['args']['classifierIds']);
     }
     if (isset($post_data['args']['threshold']) && strlen($post_data['args']['threshold']) > 0){
         $body['threshold'] = $post_data['args']['threshold'];
