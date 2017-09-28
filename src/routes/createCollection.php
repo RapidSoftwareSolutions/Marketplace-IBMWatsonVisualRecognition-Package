@@ -51,10 +51,8 @@ $app->post('/api/IBMWatsonVisualRecognition/createCollection', function ($reques
         $result['contextWrites']['to']['status_msg'] = $responseBody;
 
     } catch (GuzzleHttp\Exception\ServerException $exception) {
-
-        $responseBody = $exception->getResponse()->getBody(true);
         $result['callback'] = 'error';
-        $result['contextWrites']['to'] = json_decode($responseBody);
+        $result['contextWrites']['to'] = $exception->getResponse()->getReasonPhrase();
 
     } catch (GuzzleHttp\Exception\BadResponseException $exception) {
 

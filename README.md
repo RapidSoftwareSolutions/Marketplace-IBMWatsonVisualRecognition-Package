@@ -87,62 +87,6 @@ Delete a specific classifier.
 | version     | String     | The release date of the version of the API you want to use.
 | classifierId| String     | The ID of the classifier for which you want to delete.
 
-## IBMWatsonVisualRecognition.createCollection
-Beta. Create a new collection of images to search. You can create a maximum of 5 collections.
-
-| Field         | Type       | Description
-|---------------|------------|----------
-| apiKey        | credentials| Api key obtained from IBM
-| version       | String     | The release date of the version of the API you want to use.
-| collectionName| String     | The name of the new collection. The name can be a maximum of 128 UTF8 characters, with no spaces.
-
-## IBMWatsonVisualRecognition.getCollections
-Beta. List all custom collections.
-
-| Field  | Type       | Description
-|--------|------------|----------
-| apiKey | credentials| Api key obtained from IBM
-| version| String     | The release date of the version of the API you want to use.
-
-## IBMWatsonVisualRecognition.getSingleCollection
-Beta. Retrieve information about a specific collection.
-
-| Field       | Type       | Description
-|-------------|------------|----------
-| apiKey      | credentials| Api key obtained from IBM
-| version     | String     | The release date of the version of the API you want to use.
-| collectionId| String     | The id of the collection.
-
-## IBMWatsonVisualRecognition.addImageToCollection
-Beta. Add images to a collection. Each collection can contain 1000000 images. It takes 1 second to upload 1 images, so uploading 1000000 images takes 11 days.
-
-| Field        | Type       | Description
-|--------------|------------|----------
-| apiKey       | credentials| Api key obtained from IBM
-| version      | String     | The release date of the version of the API you want to use.
-| collectionId | String     | The id of the collection.
-| imageFile    | File       | Image file
-| imageMetadata| String     | A json object file that adds metadata to the image. This can be anything that can be specified in a JSON object. For example, key-value pairs. 
-
-## IBMWatsonVisualRecognition.getCollectionImages
-Beta. List 100 images in a collection. This returns an arbitrary selection of 100 images. Each collection can contain 1000000 images.
-
-| Field       | Type       | Description
-|-------------|------------|----------
-| apiKey      | credentials| Api key obtained from IBM
-| version     | String     | The release date of the version of the API you want to use.
-| collectionId| String     | The id of the collection.
-
-## IBMWatsonVisualRecognition.getCollectionSingleImage
-Beta. List details about a specific image in a collection.
-
-| Field       | Type       | Description
-|-------------|------------|----------
-| apiKey      | credentials| Api key obtained from IBM
-| version     | String     | The release date of the version of the API you want to use.
-| collectionId| String     | The id of the collection.
-| imageId     | String     | The id of the image.
-
 ## IBMWatsonVisualRecognition.addMetadataToImage
 Beta. Add metadata to a specific image in a collection. Use metadata for your own reference to identify images. 
 
@@ -184,34 +128,3 @@ Beta. Delete the metadata for a specific image in a collection.
 | version     | String     | The release date of the version of the API you want to use.
 | collectionId| String     | The id of the collection.
 | imageId     | String     | The id of the image.
-
-## IBMWatsonVisualRecognition.findSimilarImagesInCollection
-Beta. Upload an image to find similar images in your custom collection.
-
-| Field       | Type       | Description
-|-------------|------------|----------
-| apiKey      | credentials| Api key obtained from IBM
-| version     | String     | The release date of the version of the API you want to use.
-| collectionId| String     | The id of the collection.
-| imageFile   | File       | The image file (.jpg or .png) of the image to search against the collection. Minimum recommend size is 32X32 pixels.
-| limit       | Number     | The number of similar results you want returned. Default limit is 10 results, you can specify a maximum limit of 100 results.
-
-## IBMWatsonVisualRecognition.deleteImageFromCollection
-Beta. Delete an image from a collection.
-
-| Field       | Type       | Description
-|-------------|------------|----------
-| apiKey      | credentials| Api key obtained from IBM
-| version     | String     | The release date of the version of the API you want to use.
-| collectionId| String     | The id of the collection.
-| imageId     | String     | The id of the image.
-
-## IBMWatsonVisualRecognition.deleteCollection
-Beta. Delete a specific collection.
-
-| Field       | Type       | Description
-|-------------|------------|----------
-| apiKey      | credentials| Api key obtained from IBM
-| version     | String     | The release date of the version of the API you want to use.
-| collectionId| String     | The id of the collection.
-
