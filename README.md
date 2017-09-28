@@ -17,7 +17,7 @@ Upload URLs to identify classes by default.
 | Field         | Type       | Description
 |---------------|------------|----------
 | apiKey        | credentials| Api key obtained from IBM
-| version       | String     | The release date of the version of the API you want to use.
+| version       | String     | The release date of the version of the API you want to use. Specify dates in YYYY-MM-DD format. The current version is 2016-05-20.
 | imageUrl      | String     | The URL of an image (.jpg, or .png).
 | owners        | Array      | An array with the value(s) 'IBM' and/or 'me' to specify which classifiers to run.
 | classifierIds | Array      | An array of the classifier IDs used to classify the images. 'Default' is the classifier_id of the built-in classifier.
@@ -30,7 +30,7 @@ Analyze faces in images and get data about them, such as estimated age, gender, 
 | Field   | Type       | Description
 |---------|------------|----------
 | apiKey  | credentials| Api key obtained from IBM
-| version | String     | The release date of the version of the API you want to use.
+| version | String     | The release date of the version of the API you want to use. Specify dates in YYYY-MM-DD format. The current version is 2016-05-20.
 | imageUrl| String     | The URL of an image (.jpg, or .png).
 
 ## IBMWatsonVisualRecognition.createClassifier
@@ -39,7 +39,7 @@ Train a new multi-faceted classifier on the uploaded image data.
 | Field                     | Type       | Description
 |---------------------------|------------|----------
 | apiKey                    | credentials| Api key obtained from IBM
-| version                   | String     | The release date of the version of the API you want to use.
+| version                   | String     | The release date of the version of the API you want to use. Specify dates in YYYY-MM-DD format. The current version is 2016-05-20.
 | className                 | String     | The name of the new classifier.
 | positiveExampleImages1    | File       | A compressed (.zip) file of images that depict the visual subject for a class within the new classifier. Must contain a minimum of 10 images. Minimum recommend size is 32X32 pixels.
 | positiveExampleImagesName1| String     | The name of the positive examples in 1 file
@@ -53,7 +53,7 @@ Retrieve a list of user-created classifiers.
 | Field  | Type       | Description
 |--------|------------|----------
 | apiKey | credentials| Api key obtained from IBM
-| version| String     | The release date of the version of the API you want to use.
+| version| String     | The release date of the version of the API you want to use. Specify dates in YYYY-MM-DD format. The current version is 2016-05-20.
 | verbose| Boolean    | Specify true to return classifier details. Omit this parameter to return a brief list of classifiers.
 
 ## IBMWatsonVisualRecognition.getSingleClassifier
@@ -62,7 +62,7 @@ Retrieve information about a specific classifier.
 | Field       | Type       | Description
 |-------------|------------|----------
 | apiKey      | credentials| Api key obtained from IBM
-| version     | String     | The release date of the version of the API you want to use.
+| version     | String     | The release date of the version of the API you want to use. Specify dates in YYYY-MM-DD format. The current version is 2016-05-20.
 | classifierId| String     | The ID of the classifier for which you want details.
 
 ## IBMWatsonVisualRecognition.updateClassifier
@@ -71,7 +71,7 @@ Update an existing classifier by adding new classes, or by adding new images to 
 | Field                    | Type       | Description
 |--------------------------|------------|----------
 | apiKey                   | credentials| Api key obtained from IBM
-| version                  | String     | The release date of the version of the API you want to use.
+| version                  | String     | The release date of the version of the API you want to use. Specify dates in YYYY-MM-DD format. The current version is 2016-05-20.
 | classifierId             | String     | The id of the classifier.
 | positiveExampleImages    | File       | A compressed (.zip) file of images that depict the visual subject for a class within the new classifier. Must contain a minimum of 10 images. Minimum recommend size is 32X32 pixels.
 | positiveExampleImagesName| String     | The name of the positive examples in 1 file
@@ -83,5 +83,5 @@ Delete a specific classifier.
 | Field       | Type       | Description
 |-------------|------------|----------
 | apiKey      | credentials| Api key obtained from IBM
-| version     | String     | The release date of the version of the API you want to use.
+| version     | String     | The release date of the version of the API you want to use. Specify dates in YYYY-MM-DD format. The current version is 2016-05-20.
 | classifierId| String     | The ID of the classifier for which you want to delete.
