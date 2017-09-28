@@ -26,7 +26,7 @@
         {
           "name": "version",
           "type": "String",
-          "info": "The release date of the version of the API you want to use.",
+          "info": "The release date of the version of the API you want to use. Specify dates in YYYY-MM-DD format. The current version is 2016-05-20.",
           "required": true
         },
         {
@@ -64,15 +64,18 @@
           "required": false
         },
         {
-          "name": "threshold",
-          "type": "String",
-          "info": "A floating value that specifies the minimum score a class must have to be displayed in the response. Setting the threshold to 0.0 will return all values, regardless of their classification score.",
-          "required": false
-        },
-        {
           "name": "acceptLanguage",
-          "type": "String",
-          "info": "Specifies the language of the output. You can specify en for English, es for Spanish, ar for Arabic, or ja for Japanese. Classifiers for which no translation is available are ommitted.",
+          "type": "Select",
+          "options": [
+            "en",
+            "ar",
+            "de",
+            "es",
+            "it",
+            "ja",
+            "ko"
+          ],
+          "info": "The 2-letter primary language code as assigned in ISO standard 639. Supported languages are en (English), ar (Arabic), de (German), es (Spanish), it (Italian), ja (Japanese), and ko (Korean).",
           "required": false
         }
       ],
@@ -100,7 +103,7 @@
         {
           "name": "version",
           "type": "String",
-          "info": "The release date of the version of the API you want to use.",
+          "info": "The release date of the version of the API you want to use. Specify dates in YYYY-MM-DD format. The current version is 2016-05-20.",
           "required": true
         },
         {
@@ -134,7 +137,7 @@
         {
           "name": "version",
           "type": "String",
-          "info": "The release date of the version of the API you want to use.",
+          "info": "The release date of the version of the API you want to use. Specify dates in YYYY-MM-DD format. The current version is 2016-05-20.",
           "required": true
         },
         {
@@ -198,12 +201,16 @@
         {
           "name": "version",
           "type": "String",
-          "info": "The release date of the version of the API you want to use.",
+          "info": "The release date of the version of the API you want to use. Specify dates in YYYY-MM-DD format. The current version is 2016-05-20.",
           "required": true
         },
         {
           "name": "verbose",
-          "type": "Boolean",
+          "type": "Select",
+          "options": [
+            "true",
+            "false"
+          ],
           "info": "Specify true to return classifier details. Omit this parameter to return a brief list of classifiers.",
           "required": false
         }
@@ -232,7 +239,7 @@
         {
           "name": "version",
           "type": "String",
-          "info": "The release date of the version of the API you want to use.",
+          "info": "The release date of the version of the API you want to use. Specify dates in YYYY-MM-DD format. The current version is 2016-05-20.",
           "required": true
         },
         {
@@ -266,7 +273,7 @@
         {
           "name": "version",
           "type": "String",
-          "info": "The release date of the version of the API you want to use.",
+          "info": "The release date of the version of the API you want to use. Specify dates in YYYY-MM-DD format. The current version is 2016-05-20.",
           "required": true
         },
         {
@@ -318,7 +325,7 @@
         {
           "name": "version",
           "type": "String",
-          "info": "The release date of the version of the API you want to use.",
+          "info": "The release date of the version of the API you want to use. Specify dates in YYYY-MM-DD format. The current version is 2016-05-20.",
           "required": true
         },
         {
@@ -339,6 +346,5 @@
         }
       ]
     }
-
   ]
 }

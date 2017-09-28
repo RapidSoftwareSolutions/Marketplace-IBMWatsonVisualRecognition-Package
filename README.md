@@ -2,7 +2,7 @@
 
 # IBMWatsonVisualRecognition Package
 IBMWatsonVisualRecognition
-* Domain: ibm.com
+* Domain: [IBM](http://ibm.com)
 * Credentials: apiKey
 
 ## How to get credentials: 
@@ -22,8 +22,7 @@ Upload URLs to identify classes by default.
 | owners        | Array      | An array with the value(s) 'IBM' and/or 'me' to specify which classifiers to run.
 | classifierIds | Array      | An array of the classifier IDs used to classify the images. 'Default' is the classifier_id of the built-in classifier.
 | threshold     | String     | A floating value that specifies the minimum score a class must have to be displayed in the response. Setting the threshold to 0.0 will return all values, regardless of their classification score.
-| threshold     | String     | A floating value that specifies the minimum score a class must have to be displayed in the response. Setting the threshold to 0.0 will return all values, regardless of their classification score.
-| acceptLanguage| String     | Specifies the language of the output. You can specify en for English, es for Spanish, ar for Arabic, or ja for Japanese. Classifiers for which no translation is available are ommitted.
+| acceptLanguage| String     | The 2-letter primary language code as assigned in ISO standard 639. Supported languages are en (English), ar (Arabic), de (German), es (Spanish), it (Italian), ja (Japanese), and ko (Korean).
 
 ## IBMWatsonVisualRecognition.detectFaces
 Analyze faces in images and get data about them, such as estimated age, gender, plus names of celebrities. 
